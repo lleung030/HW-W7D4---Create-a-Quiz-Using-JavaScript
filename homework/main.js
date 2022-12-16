@@ -54,25 +54,39 @@ function addQuestion(question, answer, questionDifficulty, id) {
     questionsEl.appendChild(questionEl)
 }
 
+
 const clickedEvent = () => {
     // console.log(questions)
-    
+    const scoreEl = document.getElementById('score') 
+    countCorrect = 0
     for (index in questions) {
         let inputAnswer = document.getElementById(`answers${questions[index].id}`);
         console.log(inputAnswer.value);
         let keyAnswers = questions[index].answer;
         console.log(keyAnswers)
-        
-        // while(inputAnswer.parentNode.style.backgroundColor = 'white'){
 
         if (inputAnswer.value == keyAnswers) {
-            return inputAnswer.parentNode.style.backgroundColor = 'green'
+            countCorrect +=1;
+            inputAnswer.parentNode.style.backgroundColor = 'green'
         } else if (inputAnswer.value !== keyAnswers) {
-            return inputAnswer.parentNode.style.backgroundColor = 'red'
+            inputAnswer.parentNode.style.backgroundColor = 'red'
         }  
     
     }  console.log(`${countCorrect}/10`) 
+    
+    const questionCorrectEl = document.createElement('div')
+    questionCorrectEl.classList.add('card','mb-3')
+
+    //input type text , submit put my questions div inside a submit form  
+
+    questionCorrectEl.innerHTML=`
+        <div class="card-body">
+            <h2>Score: ${countCorrect}/10</h2> 
+        </div>
+    `
+    scoreEl.appendChild(questionCorrectEl)
     }
+    
 
     // console.log(document.getElementById('answers'))
 
