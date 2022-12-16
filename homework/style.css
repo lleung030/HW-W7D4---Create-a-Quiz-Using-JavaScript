@@ -4,6 +4,5 @@
 }
 
 #questions .card:hover{
-    box-shadow: -40px 3px 8px rgba(0,0,0,0.3);
-
+    box-shadow: -40px 3px 8px rgba(34, 36, 180, 0.842);
 }

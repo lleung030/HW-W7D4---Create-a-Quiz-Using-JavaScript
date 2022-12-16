@@ -67,9 +67,9 @@ const clickedEvent = () => {
 
         if (inputAnswer.value == keyAnswers) {
             countCorrect +=1;
-            inputAnswer.parentNode.style.backgroundColor = 'green'
+            inputAnswer.parentNode.style.backgroundColor = 'rgb(8, 125, 39)'
         } else if (inputAnswer.value !== keyAnswers) {
-            inputAnswer.parentNode.style.backgroundColor = 'red'
+            inputAnswer.parentNode.style.backgroundColor = 'rgb(137, 22, 22)'
         }  
     
     }  console.log(`${countCorrect}/10`) 
