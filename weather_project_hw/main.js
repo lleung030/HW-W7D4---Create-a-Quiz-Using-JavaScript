@@ -49,6 +49,14 @@ const weatherFetch = async function(cityname) {
     weatherFetch(inputElement.value)
 })
 
+    const clearBtn = document.getElementById('clear')
+    clearBtn.addEventListener('click', (event) => {
+    event.preventDefault()
+    weatherElement.innerHTML = ''
+    // weathers = []
+    // localStorage.setItem('employees', JSON.stringify(employees))
+    localStorage.removeItem('weatherDataInfo')
+})
 
 // weatherFetch('San Francisco')
 
